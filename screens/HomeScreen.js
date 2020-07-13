@@ -7,13 +7,13 @@ function HomeScreen({navigation}) {
             index: 0,
             routes: [
                 {name: "library"}
-            ]   
+            ]
         });
     }
 
     return(
         <View style={styles.container}>
-            <Text>Logo!</Text>
+            <Text>Logo</Text>
             <Button title="Start" onPress={navigateToLibrary} />
         </View>
     )
@@ -31,3 +31,5 @@ const styles = StyleSheet.create({
 
   
 export default HomeScreen;
+
+  

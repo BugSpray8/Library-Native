@@ -1,6 +1,4 @@
 import { StatusBar } from 'expo-status-bar';
-
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -8,9 +6,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from "./screens/HomeScreen";
-import LibraryScreen from "./screens/LibraryScreen";
-import BookScreen from "./screens/BookScreen";
-
+//import DetailsScreen from "./screens/DetailsScreen";
+import LibraryScreen from './screens/LibraryScreen';
+import BookScreen from './screens/BookScreen';
 
 const Stack = createStackNavigator();
 
@@ -19,26 +17,20 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="home" >
         <Stack.Screen 
-          name="home" 
-          component={HomeScreen} 
-          options={{
-            "title": "Bienvenue"
-          }} 
-        />
+        name="home" 
+        component={HomeScreen} 
+        options={{
+          title: "Bienvenue"}} />
         <Stack.Screen 
-          name="library" 
-          component={LibraryScreen} 
-          options={{
-            "title": "Bibliothèque"
-          }}
-        />
+        name="library" 
+        component={LibraryScreen} 
+        options={{
+          title: "Bibliothèque"}}/>
         <Stack.Screen 
-          name="book" 
-          component={BookScreen} 
-          options={{
-            "title": "Détails d'un livre"
-          }} 
-        />
+        name="book" 
+        component={BookScreen} 
+        options={{
+          title: "Détails d'un livre"}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
